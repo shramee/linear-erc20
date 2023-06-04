@@ -3,7 +3,7 @@ mod ERC20Contract {
     use zeroable::Zeroable;
     use starknet::get_caller_address;
     use starknet::ContractAddress;
-    use starknet::ContractAddressZeroable;
+    use starknet::contract_address_const;
     use starknet::contract_address_try_from_felt252;
     use traits::Into;
     use traits::TryInto;
@@ -38,7 +38,7 @@ mod ERC20Contract {
         assert(recipient.is_non_zero(), 'ERC20: mint to the 0 address');
         total_supply::write(initial_supply);
         balances::write(recipient, initial_supply);
-        Transfer(ContractAddressZeroable::zero(), recipient, initial_supply);
+        Transfer(contract_address_const::<0>(), recipient, initial_supply);
     }
 
     #[view]
