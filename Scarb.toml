@@ -10,3 +10,4 @@ starknet = ">=1.0.0"
 
 [scripts]
 test = "cairo-test . --starknet"
+docs = "hanji src doc -i"
