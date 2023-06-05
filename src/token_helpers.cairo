@@ -21,14 +21,14 @@ mod TokenHelpers {
         tokens_store::read(account).amount
     }
 
-    // Withraw Tokens from an account
+    // Withdraw Tokens from an account
     // Only if account is the caller
     fn withdraw(account: ContractAddress, amount: u256) -> Tokens {
         assert(account == get_caller_address(), 'Only owner can withdraw');
         withdraw_unsafe(account, amount)
     }
 
-    // Withraw Tokens from an account
+    // Withdraw Tokens from an account
     // Unsafe, verify if the caller can withdraw from account
     fn withdraw_unsafe(account: ContractAddress, withdraw_amount: u256) -> Tokens {
         let Token{amount } = tokens_store::read(account);

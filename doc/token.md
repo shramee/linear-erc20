@@ -2,14 +2,13 @@
 
 StorageAccess read for Tokens
 
-#### Parameters:
-TokenIdentifieraddress_domain TokenColon: TokenIdentifieru32 TokenComma
-TokenIdentifierbase TokenColon: TokenIdentifierStorageBaseAddress TokenRParen
+| Name | Type |
+|---|---|
+| Param `address_domain` | `u32` |
+| Param `base` | `StorageBaseAddress` |
+| **Returns** | `SyscallResult < Tokens > ` |
 
-#### Returns:
-SyscallResult < Tokens > 
-
-#### Source code
+#### Source code 
 ```rust
     // StorageAccess read for Tokens
     fn read(address_domain: u32, base: StorageBaseAddress) -> SyscallResult<Tokens> {
@@ -23,15 +22,14 @@ SyscallResult < Tokens >
 
 StorageAccess write for Tokens
 
-#### Parameters:
-TokenIdentifieraddress_domain TokenColon: TokenIdentifieru32 TokenComma
-TokenIdentifierbase TokenColon: TokenIdentifierStorageBaseAddress TokenComma
-TokenIdentifiervalue TokenColon: TokenIdentifierTokens TokenRParen
+| Name | Type |
+|---|---|
+| Param `address_domain` | `u32` |
+| Param `base` | `StorageBaseAddress` |
+| Param `value` | `Tokens` |
+| **Returns** | `SyscallResult < ( ) > ` |
 
-#### Returns:
-SyscallResult < ( ) > 
-
-#### Source code
+#### Source code 
 ```rust
     // StorageAccess write for Tokens
     fn write(address_domain: u32, base: StorageBaseAddress, value: Tokens) -> SyscallResult<()> {

@@ -2,13 +2,13 @@
 
 Gets u256 balance of an account
 
-#### Parameters:
-TokenIdentifieraccount TokenColon: TokenIdentifierContractAddress TokenRParen
-
-#### Returns:
-u256 
+| Name            | Type              |
+| --------------- | ----------------- |
+| Param `account` | `ContractAddress` |
+| **Returns**     | `u256 `           |
 
 #### Source code
+
 ```rust
     // Gets u256 balance of an account
     fn balance(account: ContractAddress) -> u256 {
@@ -20,19 +20,19 @@ u256
 
 ### Function `withdraw`
 
-Withraw Tokens from an account
+Withdraw Tokens from an account
 Only if account is the caller
 
-#### Parameters:
-TokenIdentifieraccount TokenColon: TokenIdentifierContractAddress TokenComma
-TokenIdentifieramount TokenColon: TokenIdentifieru256 TokenRParen
-
-#### Returns:
-Tokens 
+| Name            | Type              |
+| --------------- | ----------------- |
+| Param `account` | `ContractAddress` |
+| Param `amount`  | `u256`            |
+| **Returns**     | `Tokens `         |
 
 #### Source code
+
 ```rust
-    // Withraw Tokens from an account
+    // Withdraw Tokens from an account
     // Only if account is the caller
     fn withdraw(account: ContractAddress, amount: u256) -> Tokens {
         assert(account == get_caller_address(), 'Only owner can withdraw');
@@ -44,19 +44,19 @@ Tokens
 
 ### Function `withdraw_unsafe`
 
-Withraw Tokens from an account
+Withdraw Tokens from an account
 Unsafe, verify if the caller can withdraw from account
 
-#### Parameters:
-TokenIdentifieraccount TokenColon: TokenIdentifierContractAddress TokenComma
-TokenIdentifierwithdraw_amount TokenColon: TokenIdentifieru256 TokenRParen
-
-#### Returns:
-Tokens 
+| Name                    | Type              |
+| ----------------------- | ----------------- |
+| Param `account`         | `ContractAddress` |
+| Param `withdraw_amount` | `u256`            |
+| **Returns**             | `Tokens `         |
 
 #### Source code
+
 ```rust
-    // Withraw Tokens from an account
+    // Withdraw Tokens from an account
     // Unsafe, verify if the caller can withdraw from account
     fn withdraw_unsafe(account: ContractAddress, withdraw_amount: u256) -> Tokens {
         let Token{amount } = tokens_store::read(account);
@@ -71,11 +71,13 @@ Tokens
 
 Takes tokens and deposit into an account (consumes)
 
-#### Parameters:
-TokenIdentifieraccount TokenColon: TokenIdentifierContractAddress TokenComma
-TokenIdentifiertokens TokenColon: TokenIdentifierTokens TokenRParen
+| Name            | Type              |
+| --------------- | ----------------- |
+| Param `account` | `ContractAddress` |
+| Param `tokens`  | `Tokens`          |
 
 #### Source code
+
 ```rust
     // Takes tokens and deposit into an account (consumes)
     fn deposit(account: ContractAddress, tokens: Tokens) {
@@ -90,11 +92,13 @@ TokenIdentifiertokens TokenColon: TokenIdentifierTokens TokenRParen
 
 Mints Tokens to an account
 
-#### Parameters:
-TokenIdentifieraccount TokenColon: TokenIdentifierContractAddress TokenComma
-TokenIdentifiermint_amount TokenColon: TokenIdentifieru256 TokenRParen
+| Name                | Type              |
+| ------------------- | ----------------- |
+| Param `account`     | `ContractAddress` |
+| Param `mint_amount` | `u256`            |
 
 #### Source code
+
 ```rust
     // Mints Tokens to an account
     fn mint(account: ContractAddress, mint_amount: u256) {
@@ -110,13 +114,12 @@ TokenIdentifiermint_amount TokenColon: TokenIdentifieru256 TokenRParen
 
 Returns total supply amount of tokens
 
-#### Parameters:
-TokenRParen
-
-#### Returns:
-u256 
+| Name        | Type    |
+| ----------- | ------- |
+| **Returns** | `u256 ` |
 
 #### Source code
+
 ```rust
     // Returns total supply amount of tokens
     fn total_supply() -> u256 {
@@ -125,4 +128,3 @@ u256
 ```
 
 &nbsp;
-

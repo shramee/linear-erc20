@@ -7,8 +7,8 @@ A linear type system implementation of ERC20
 ### `TokenHelpers`
 
 -   [`fn balance`](doc/token_helpers.md#function-balance) Gets u256 balance of an account
--   [`fn withdraw`](doc/token_helpers.md#function-withdraw) Withraw Tokens from an account. Only if account is the caller
--   [`fn withdraw_unsafe`](doc/token_helpers.md#function-withdraw_unsafe) Withraw Tokens from an account. Unsafe, verify if the caller can withdraw from account
+-   [`fn withdraw`](doc/token_helpers.md#function-withdraw) Withdraw Tokens from an account. Only if account is the caller
+-   [`fn withdraw_unsafe`](doc/token_helpers.md#function-withdraw_unsafe) Withdraw Tokens from an account. Unsafe, verify if the caller can withdraw from account
 -   [`fn deposit`](doc/token_helpers.md#function-deposit) Takes tokens and deposit into an account (consumes)
 -   [`fn mint`](doc/token_helpers.md#function-mint) Mints Tokens to an account
 -   [`fn total_supply`](doc/token_helpers.md#function-total_supply) Returns total supply amount of tokens

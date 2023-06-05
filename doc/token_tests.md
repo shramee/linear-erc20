@@ -2,13 +2,12 @@
 
 Sets up with mint_amount minted to account 'bob'
 
-#### Parameters:
-TokenIdentifiermint_amount TokenColon: TokenIdentifierfelt252 TokenRParen
+| Name | Type |
+|---|---|
+| Param `mint_amount` | `felt252` |
+| **Returns** | `ContractAddress ` |
 
-#### Returns:
-ContractAddress 
-
-#### Source code
+#### Source code 
 ```rust
 // Sets up with mint_amount minted to account 'bob'
 fn setup_mint(mint_amount: felt252) -> ContractAddress {
@@ -24,10 +23,7 @@ fn setup_mint(mint_amount: felt252) -> ContractAddress {
 
 Test tokens are minted and supply is updated
 
-#### Parameters:
-TokenRParen
-
-#### Source code
+#### Source code 
 ```rust
 // Test tokens are minted and supply is updated
 #[test]
@@ -45,10 +41,7 @@ fn test_mint_and_supply() {
 
 Tests that withdraw unsafe returns Tokens struct and removes Tokens from account
 
-#### Parameters:
-TokenRParen
-
-#### Source code
+#### Source code 
 ```rust
 // Tests that withdraw unsafe returns Tokens struct and removes Tokens from account
 #[test]
@@ -67,10 +60,7 @@ fn test_withdraw_unsafe() {
 
 Tests that safe withdraw panics for caller different from account
 
-#### Parameters:
-TokenRParen
-
-#### Source code
+#### Source code 
 ```rust
 // Tests that safe withdraw panics for caller different from account
 #[test]
@@ -89,10 +79,7 @@ fn test_withdraw_wrong_caller() {
 Tests that safe withdraw works with correct account caller
 And returns Tokens struct and removes Tokens from account
 
-#### Parameters:
-TokenRParen
-
-#### Source code
+#### Source code 
 ```rust
 // Tests that safe withdraw works with correct account caller
 // And returns Tokens struct and removes Tokens from account
