@@ -1,3 +1,6 @@
+mod erc20;
+use erc20::ERC20Contract;
+
 use starknet::contract_address_const;
 use starknet::ContractAddress;
 use starknet::testing::set_caller_address;
@@ -5,7 +8,6 @@ use integer::u256;
 use integer::u256_from_felt252;
 use integer::BoundedInt;
 use traits::Into;
-use super::erc20::ERC20Contract;
 
 // Constants
 

@@ -13,3 +13,26 @@ impl StorageAccessTokens of StorageAccess<Tokens> {
         StorageAccess::<u256>::write(address_domain, base, value.amount)
     }
 }
+
+#[contract]
+mod TokenUtils {
+    use zeroable::Zeroable;
+    use starknet::get_caller_address;
+    use starknet::ContractAddress;
+    use starknet::contract_address_const;
+    use starknet::contract_address_try_from_felt252;
+    use traits::Into;
+    use traits::TryInto;
+    use option::OptionTrait;
+
+    struct Storage {
+        balances: LegacyMap::<ContractAddress, u256>, 
+    }
+    fn read() {// balances::read()
+    }
+
+    fn withdraw() {// balances::read()
+    }
+
+    fn mint() {}
+}

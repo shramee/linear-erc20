@@ -9,4 +9,4 @@ starknet = ">=1.0.0"
 # foo = { path = "vendor/foo" }
 
 [scripts]
-test = "cairo-test ./src/lib.cairo --starknet"
+test = "cairo-test . --starknet"
