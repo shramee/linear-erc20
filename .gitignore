@@ -1,1 +1,3 @@
 target
+example
+src/token_with_symbol.cairo
