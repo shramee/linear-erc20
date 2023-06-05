@@ -1,4 +1,4 @@
-use super::token::{Tokens, TokenHelpers};
+use super::{Tokens, TokenHelpers};
 use starknet::contract_address_const;
 use starknet::ContractAddress;
 use starknet::testing::set_caller_address;

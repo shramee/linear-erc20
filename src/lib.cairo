@@ -1,5 +1,9 @@
 mod token;
+
+mod token_helpers;
+
 mod token_tests;
-// PS: No StorageAccessTokens, coz you don't write/read Tokens storage
-// And only access them from utils
-use token::{Tokens, TokenHelpers};
+
+// Interact with Tokens via TokenHelpers
+use token::Tokens;
+use token_helpers::TokenHelpers;
