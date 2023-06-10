@@ -1,2 +1,3 @@
 [crate_roots]
 linear_erc20 = "./src"
+example = "./example"
