@@ -1,9 +1,10 @@
+// Sourced from https://github.com/argentlabs/starknet-build/blob/aab66f0090a824d4bae032803c10400508e9e79a/ICO/src/ERC20.cairo
+
 #[contract]
 mod ERC20Contract {
     use zeroable::Zeroable;
     use starknet::get_caller_address;
     use starknet::ContractAddress;
-    use starknet::ContractAddressZeroable;
     use starknet::contract_address_try_from_felt252;
     use traits::Into;
     use traits::TryInto;
@@ -38,7 +39,7 @@ mod ERC20Contract {
         assert(recipient.is_non_zero(), 'ERC20: mint to the 0 address');
         total_supply::write(initial_supply);
         balances::write(recipient, initial_supply);
-        Transfer(ContractAddressZeroable::zero(), recipient, initial_supply);
+        Transfer(contract_address_try_from_felt252(0).unwrap(), recipient, initial_supply);
     }
 
     #[view]
